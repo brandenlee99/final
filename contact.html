@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowera</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="overlay">
+                <h1>Empowera</h1>
+                <h3>Your journey, your power, your way</h3>
+                <h2>Contact Us</h2>
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="overlay">
+                <section id="Contact">
+                    <h2>Contact us</h2>
+                    <img src="images/Infinity.jpg" alt="hands holding an infinity sign in rainbow colors" style="display: block; margin: 0 auto; width: 300px;">
+                    <div class="form-container">
+                        <!-- Updated Form -->
+                        <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
+                            <!-- Email Field -->
+                            <div class="form-group mb-3">
+                                <label for="email" class="form-label">Email address:</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-envelope-fill"></i> <!-- Email Icon -->
+                                    </span>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="e.g. mario@example.com" required>
+                                </div>
+                            </div>
+
+                            <!-- Name Field -->
+                            <div class="form-group mb-3">
+                                <label for="name" class="form-label">Name:</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-person-fill"></i> <!-- Person Icon -->
+                                    </span>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="e.g. Mario" required>
+                                </div>
+                            </div>
+
+                            <!-- Subject Dropdown -->
+                            <div class="form-group mb-3">
+                                <label for="subject" class="form-label">What is your question about?</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-chat-dots-fill"></i> <!-- Chat Icon -->
+                                    </span>
+                                    <select class="form-select" id="subject" name="subject">
+                                        <option value="Pricing query">Pricing query</option>
+                                        <option value="Availability query">Availability query</option>
+                                        <option value="Other query">Other query</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Query Textarea -->
+                            <div class="form-group mb-3">
+                                <label for="query" class="form-label">Your query...</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-pencil-fill"></i> <!-- Pencil Icon -->
+                                    </span>
+                                    <textarea id="query" class="form-control" name="query" style="height: 140px" placeholder="Type your query here..." required></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-secondary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            Copyright &copy; 2024 Empowera - All Rights Reserved
+        </footer>
+    </div>
+</body>
+
+</html>
