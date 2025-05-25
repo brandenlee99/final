@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SusanChanArtGallery</title>
+    <script src="windowSize.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header>
+    <img src="images/logo.png" alt="logo">
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="album.html">Album/Work</a></li>
+            <li><a href="contact.html">About Artist/Contact</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="resources.html">Resources</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <img src="images/background_image.jpg" alt="background">
+</main>
+
+<div>
+    <h1>Contact Susan </h1>
+</div>
+
+<form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message"></textarea><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<div class="captcha-container">
+    <div id="captcha-display" class="captcha-display"></div>
+    <input type="text" id="captcha-input" placeholder="Enter CAPTCHA">
+    <button type="button" onclick="generateCaptcha()">Refresh</button>
+    <button type="button" onclick="validateCaptcha()">Submit CAPTCHA</button>
+    <p id="captcha-feedback" class="feedback"></p>
+</div>
+
+<script>
+let currentCaptcha = '';
+
+function generateCaptcha() {
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+    currentCaptcha = num1 + num2;
+    document.getElementById('captcha-display').textContent = `What is ${num1} + ${num2}?`;
+    document.getElementById('captcha-feedback').textContent = ''; // Clear previous feedback
+    document.getElementById('captcha-input').value = ''; // Clear input
+}
+
+function validateCaptcha() {
+    const userInput = document.getElementById('captcha-input').value.trim();
+    const feedback = document.getElementById('captcha-feedback');
+    
+    if (parseInt(userInput) === currentCaptcha) {
+        feedback.textContent = '✅ Correct!';
+        feedback.style.color = 'green';
+    } else {
+        feedback.textContent = '❌ Incorrect. Try again.';
+        feedback.style.color = 'red';
+        generateCaptcha(); // Optional: refresh CAPTCHA on wrong answer
+    }
+}
+
+// Generate CAPTCHA when the page loads
+window.onload = generateCaptcha;
+</script>
+
+</body>
+</html>

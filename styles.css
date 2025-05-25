@@ -1,0 +1,141 @@
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background-color: #ffffff;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background-image: url('images/background_image.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 100px;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  z-index: 10;
+}
+
+.logo img {
+  height: 80px;
+}
+
+/* Main Content Image */
+main img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+}
+
+/* Content Sections */
+.content {
+  display: flex;
+}
+
+nav, section {
+  width: 50%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Responsive Layouts */
+@media only screen and (min-width: 600px) {
+  .content {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .content {
+    display: flex;
+  }
+}
+
+/* Captcha Form Styles */
+#captchaForm {
+  margin-top: 20px;
+}
+
+#captchaQuestion {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#captchaInput {
+  width: 100px;
+  padding: 5px;
+}
+
+#captchaStatus {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.captcha-container {
+  margin-top: 20px;
+}
+
+.captcha-display {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+#captcha-feedback {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Subscribe Box */
+.subscribe-box {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f4f8;
+  border-radius: 8px;
+}
+
+#subscribe-button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#subscribe-button:hover {
+  background-color: #005fa3;
+}
+
+/* Additional Flex Layouts */
+article {
+  display: flex;
+}
+
+footer {
+  display: flex;
+}
